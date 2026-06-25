@@ -56,7 +56,7 @@ const AttendanceHistory = () => {
         </div>
 
         {/* STUDENT INFO */}
-        <div className="mt-5 space-y-2 text-left bg-gray-50 p-4 rounded-lg">
+        {/* <div className="mt-5 space-y-2 text-left bg-gray-50 p-4 rounded-lg">
           <p className="text-gray-700">
             <span className="font-semibold">Name:</span>{" "}
             {user?.fullname || user?.name || "N/A"}
@@ -76,14 +76,14 @@ const AttendanceHistory = () => {
             <span className="font-semibold">Student ID:</span>{" "}
             {user?.id || "N/A"}
           </p>
-        </div>
+        </div> */}
 
         {/* DEBUG QR CONTENT */}
-        <div className="mt-4 p-3 bg-blue-50 rounded text-left text-xs break-all">
+        {/* <div className="mt-4 p-3 bg-blue-50 rounded text-left text-xs break-all">
           <strong>QR Content:</strong>
           <br />
           {qrData}
-        </div>
+        </div> */}
 
         {/* WARNING */}
         <div className="mt-6 bg-red-50 border border-red-200 text-red-700 p-3 rounded-lg text-sm">

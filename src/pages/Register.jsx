@@ -18,7 +18,7 @@ export default function Students() {
   const fetchStudents = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5001/api/auth/students"
+        "https://attendanceapi-production-8964.up.railway.app/api/auth/students"
       );
 
       setStudents(res.data.students);
