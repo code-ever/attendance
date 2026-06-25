@@ -71,21 +71,21 @@ const Sidebar = ( { open, setOpen } ) => {
                 Add Student
               </NavLink>
 
-              <NavLink
+              {/* <NavLink
                 to="/allstd"
                 className="p-3 rounded hover:bg-blue-700"
                 onClick={() => setOpen( false )}
               >
                 All Student
-              </NavLink>
+              </NavLink> */}
 
-              <NavLink
+              {/* <NavLink
                 to="/showatt"
                 className="p-3 rounded hover:bg-blue-700"
                 onClick={() => setOpen( false )}
               >
                 Show Attendance
-              </NavLink>
+              </NavLink> */}
             </>
           )}
           {/* <NavLink
