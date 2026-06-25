@@ -78,7 +78,7 @@ const startScanner = async () => {
           );
 
           const response = await axios.post(
-            "http://localhost:5001/api/attendance/scan",
+            "https://attendanceapi-production-8964.up.railway.app/api/attendance/scan",
             payload
           );
 
