@@ -1,14 +1,16 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Sidebar = ({ open, setOpen }) => {
+const Sidebar = ( { open, setOpen } ) => {
+  const user = JSON.parse( localStorage.getItem( "user" ) ) || {};
+
   return (
     <>
       {/* Mobile Backdrop */}
       {open && (
         <div
           className="fixed inset-0 bg-black/50 z-40 md:hidden"
-          onClick={() => setOpen(false)}
+          onClick={() => setOpen( false )}
         />
       )}
 
@@ -36,7 +38,7 @@ const Sidebar = ({ open, setOpen }) => {
           <NavLink
             to="/dashboard"
             className="p-3 rounded hover:bg-blue-700"
-            onClick={() => setOpen(false)}
+            onClick={() => setOpen( false )}
           >
             Dashboard
           </NavLink>
@@ -44,7 +46,7 @@ const Sidebar = ({ open, setOpen }) => {
           <NavLink
             to="/profile"
             className="p-3 rounded hover:bg-blue-700"
-            onClick={() => setOpen(false)}
+            onClick={() => setOpen( false )}
           >
             Profile
           </NavLink>
@@ -52,11 +54,40 @@ const Sidebar = ({ open, setOpen }) => {
           <NavLink
             to="/attendance"
             className="p-3 rounded hover:bg-blue-700"
-            onClick={() => setOpen(false)}
+            onClick={() => setOpen( false )}
           >
             Take Attendance
           </NavLink>
 
+          {/* admin */}
+          {/* admin */}
+          {user.access_level !== "student" && (
+            <>
+              <NavLink
+                to="/register"
+                className="p-3 rounded hover:bg-blue-700"
+                onClick={() => setOpen( false )}
+              >
+                Add Student
+              </NavLink>
+
+              <NavLink
+                to="/allstd"
+                className="p-3 rounded hover:bg-blue-700"
+                onClick={() => setOpen( false )}
+              >
+                All Student
+              </NavLink>
+
+              <NavLink
+                to="/showatt"
+                className="p-3 rounded hover:bg-blue-700"
+                onClick={() => setOpen( false )}
+              >
+                Show Attendance
+              </NavLink>
+            </>
+          )}
           {/* <NavLink
             to="/records"
             className="p-3 rounded hover:bg-blue-700"

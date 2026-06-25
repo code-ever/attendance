@@ -43,7 +43,7 @@ export default function Students() {
 
     try {
       await axios.post(
-        "http://localhost:5001/api/auth/register",
+        "https://attendanceapi-production-8964.up.railway.app/api/auth/register",
         formData
       );
 

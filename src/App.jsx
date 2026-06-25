@@ -13,6 +13,7 @@ import StudentProfile from "./pages/Profile";
 import AttendanceScanner from "./pages/AttendanceScanner";
 import RegisterStudent from "./pages/Register";
 import Students from "./pages/Register";
+import ShowStudents from "./pages/ShowStudents";
 
 const App = () => {
   return (
@@ -35,6 +36,7 @@ const App = () => {
             </ProtectedRoute>
           }
         >
+          <Route path="/allstd" element={<ShowStudents/>} />
           <Route path="/register" element={<Students/>} />
           <Route path="/scan" element={<AttendanceScanner/>} />
           <Route path="/profile" element={<StudentProfile />} />
