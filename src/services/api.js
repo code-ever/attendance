@@ -2,7 +2,7 @@ import axios from "axios";
 import { getToken } from "../utils/auth";
 
 const API = axios.create( {
-    baseURL: "http://localhost:5001/api",
+    baseURL: "https://attendanceapi-production-8964.up.railway.app/api",
 } );
 
 // Attach token automatically
