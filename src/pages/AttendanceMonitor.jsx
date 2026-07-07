@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import io from "socket.io-client";
 
-const socket = io("http://localhost:5000");
+const socket = io("https://attendance-api-k5dw.onrender.com/api",);
 
 const AttendanceMonitor = () => {
   const [attendance, setAttendance] = useState([]);

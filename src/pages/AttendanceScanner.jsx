@@ -56,7 +56,7 @@ const AttendanceScanner = () => {
               console.log( "Sending Payload:", payload );
 
               const response = await axios.post(
-                "https://attendanceapi-production-8964.up.railway.app/api/attendance/scan",
+                "https://attendance-api-k5dw.onrender.com/api/attendance/scan",
                 payload
               );
 
