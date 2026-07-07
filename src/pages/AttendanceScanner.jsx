@@ -55,21 +55,11 @@ const startScanner = async () => {
               )
             ) || {};
 
-          const payload = {
-            qr_data: decodedText,
-            subject:
-              session.subject || "General Class",
-            lecturer_name:
-              session.lecturer_name ||
-              "Lecturer",
-            level:
-              session.level ||
-              studentData.level ||
-              "N/A",
-            department:
-              session.department ||
-              studentData.department ||
-              "N/A",
+          const payload = { qr_data: decodedText,
+            subject:session.subject || "General Class",
+            lecturer_name: session.lecturer_name ||"Lecturer",
+            level:session.level || studentData.level || "N/A",
+            department: session.department ||studentData.department ||"N/A",
           };
 
           console.log(

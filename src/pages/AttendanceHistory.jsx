@@ -9,12 +9,7 @@ const AttendanceHistory = () => {
   const user = JSON.parse( localStorage.getItem( "user" ) ) || {};
 
   // QR DATA MUST MATCH BACKEND
-  const qrData = JSON.stringify( {
-    user_id: user?.id,
-    fullname: user?.fullname,
-    reg_number: user?.reg_number,
-    parent_phone: user?.parent_phone,
-  } );
+  const qrData = user?.reg_number;
 
   return (
     <div className="min-h-screen bg-gray-100 p-4 md:p-8">
